@@ -1,4 +1,8 @@
-
+.tooltip {
+  background-color: blue;
+  border-radius: 25%;
+  padding: 0.2rem;
+}
 
 /*
 Copyright Google LLC. All Rights Reserved.

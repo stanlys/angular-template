@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { CartService } from "../cart.service";
 
 @Component({
-  selector: 'app-top-bar',
-  templateUrl: './top-bar.component.html',
-  styleUrls: ['./top-bar.component.css']
+  selector: "app-top-bar",
+  templateUrl: "./top-bar.component.html",
+  styleUrls: ["./top-bar.component.css"],
 })
 export class TopBarComponent {
-
+  products = this.cart.getItems();
+  constructor(private cart: CartService) {}
 }
-
 
 /*
 Copyright Google LLC. All Rights Reserved.
