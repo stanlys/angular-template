@@ -12,7 +12,7 @@ export class CartComponent {
   constructor(private cartService: CartService) {}
 
   clearCart() {
+    this.products = this.cartService.clearCart();
     console.log("clear");
-    this.cartService.clearCart();
   }
 }
