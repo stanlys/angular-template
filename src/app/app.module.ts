@@ -11,6 +11,7 @@ import { ProductAlertComponent } from "./product-alert/product-alert.component";
 import { ProductDetailComponent } from "./product-detail/product-detail.component";
 import { CartComponent } from "./cart/cart.component";
 import { ShippingComponent } from "./shipping/shipping.component";
+import { MainPageComponent } from './main-page/main-page.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { ShippingComponent } from "./shipping/shipping.component";
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: "", component: ProductListComponent },
+      { path: "", component: MainPageComponent },
+      { path: "first", component: ProductListComponent },
       { path: "products/:productId", component: ProductDetailComponent },
       { path: "cart", component: CartComponent },
       { path: "shipping", component: ShippingComponent },
@@ -32,6 +34,7 @@ import { ShippingComponent } from "./shipping/shipping.component";
     ProductDetailComponent,
     CartComponent,
     ShippingComponent,
+    MainPageComponent,
   ],
   bootstrap: [AppComponent],
 })

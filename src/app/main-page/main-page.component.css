@@ -1,0 +1,28 @@
+main {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+}
+
+main > div {
+  justify-items: space-around;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+main > div > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 15rem;
+  width: 15rem;
+}
+
+main > div > a:hover {
+  background-color: lightcyan;
+  border-radius: 3rem;
+  color: burlywood;
+  cursor: pointer;
+}
