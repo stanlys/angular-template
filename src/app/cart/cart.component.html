@@ -1,9 +1,21 @@
 <p>cart works!</p>
 <a routerLink="/shipping">Shipping information</a>
 <hr />
-<div *ngFor="let item of products" class="cart-item">
-  <span>{{ item.name }}</span>
-</div>
 
-<hr />
 <button (click)="clearCart()">Delete All</button>
+
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit()" class="cart-form">
+  <div>
+    <label for="name">Name</label>
+    <input id="name" type="text" formControlName="name" />
+  </div>
+  <div>
+    <label for="address">Address </label>
+    <input id="address" type="text" formControlName="address" />
+  </div>
+  <label for="name">Products </label>
+  <div *ngFor="let item of products" class="cart-item">
+    <input type="checkbox" formControlName="products" />{{ item.name }}
+  </div>
+  <button class="button" type="submit">Send</button>
+</form>

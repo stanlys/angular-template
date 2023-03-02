@@ -1,6 +1,6 @@
 <h4>shipping detail</h4>
 
-<div *ngFor="let item of shippingCost | async" class="shipping-item">
+<div *ngFor="let item of shippingCost | async" class="cart-item">
   <p>
     <span style="font-weight: 600"> {{ item.type }} </span>
     {{ item.price | currency : "RUB" }}
