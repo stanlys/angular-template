@@ -9,7 +9,9 @@ import { CartService } from "../cart.service";
 export class CartComponent {
   products = this.cartService.getItems();
 
-  constructor(private cartService: CartService) {}
+  constructor(private cartService: CartService) {
+    this.products = this.cartService.getItems();
+  }
 
   clearCart() {
     this.products = this.cartService.clearCart();
