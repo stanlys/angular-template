@@ -1,3 +1,9 @@
+.main-page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 main {
   display: flex;
   width: 100vw;
@@ -16,8 +22,8 @@ main > div > a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 15rem;
-  width: 15rem;
+  height: 5rem;
+  width: 5rem;
 }
 
 main > div > a:hover {
@@ -25,4 +31,9 @@ main > div > a:hover {
   border-radius: 3rem;
   color: burlywood;
   cursor: pointer;
+}
+
+img {
+  height: 150px;
+  width: 300px;
 }
