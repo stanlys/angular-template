@@ -6,7 +6,6 @@
 
 main {
   display: flex;
-  width: 100vw;
   justify-content: center;
 }
 
@@ -33,7 +32,7 @@ main > div > a:hover {
   cursor: pointer;
 }
 
-img {
+/* img {
   height: 150px;
   width: 300px;
-}
+} */

@@ -11,7 +11,9 @@ import { ProductAlertComponent } from "./product-alert/product-alert.component";
 import { ProductDetailComponent } from "./product-detail/product-detail.component";
 import { CartComponent } from "./cart/cart.component";
 import { ShippingComponent } from "./shipping/shipping.component";
-import { MainPageComponent } from './main-page/main-page.component';
+import { MainPageComponent } from "./main-page/main-page.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { MatInputModule } from "@angular/material/input";
 
 @NgModule({
   imports: [
@@ -25,6 +27,8 @@ import { MainPageComponent } from './main-page/main-page.component';
       { path: "cart", component: CartComponent },
       { path: "shipping", component: ShippingComponent },
     ]),
+    BrowserAnimationsModule,
+    MatInputModule,
   ],
   declarations: [
     AppComponent,
