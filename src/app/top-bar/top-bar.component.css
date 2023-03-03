@@ -4,14 +4,19 @@
 }
 
 nav {
-  color: white;
+  background-color: var(--element-background-color);
+  color: var(--link-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
+  padding: 0.1rem;
   padding-left: 3rem;
+  padding-right: 3rem;
   min-height: 3rem;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+nav > img {
+  height: 4rem;
 }
 /*
 Copyright Google LLC. All Rights Reserved.

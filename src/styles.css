@@ -1,6 +1,23 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+html,
+body {
+  height: 100%;
+  --main-background-color: #cccccc;
+  --element-background-color: #f4594e;
+  --link-color: #fff;
+  --link-hover-color: #0066ff;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: var(--main-background-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+footer {
+  background-color: var(--element-background-color);
+}

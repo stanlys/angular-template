@@ -7,6 +7,8 @@
 main {
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 80vh;
 }
 
 main > div {
@@ -21,18 +23,18 @@ main > div > a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 5rem;
-  width: 5rem;
+  height: 6rem;
+  width: 6rem;
 }
 
 main > div > a:hover {
-  background-color: lightcyan;
-  border-radius: 3rem;
-  color: burlywood;
+  background-color: var(--element-background-color);
+  border-radius: 1rem;
+  color: var(--link-hover-color);
   cursor: pointer;
 }
 
-/* img {
+img {
   height: 150px;
   width: 300px;
-} */
+}
