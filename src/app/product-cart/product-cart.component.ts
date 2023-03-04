@@ -8,6 +8,7 @@ import { IProducts } from "app/interfaces/product";
 })
 export class ProductCartComponent {
   @Input() product: IProducts;
+  @Input() index!: number;
 
   showDetails = false;
 

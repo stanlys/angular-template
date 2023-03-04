@@ -1,5 +1,6 @@
-import { Component } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 import { IProducts, MOCK_PRODUCTS } from "app/interfaces/product";
+import { ProductServices } from "app/services/product.services";
 
 import { products } from "../products";
 
@@ -8,9 +9,19 @@ import { products } from "../products";
   templateUrl: "./product-list.component.html",
   styleUrls: ["./product-list.component.css"],
 })
-export class ProductListComponent {
-  products = products;
-  fakeProducts: IProducts[] = MOCK_PRODUCTS;
+export class ProductListComponent implements OnInit {
+  products: IProducts[] = [];
+  isLoading = false;
+
+  constructor(private productService: ProductServices) {}
+
+  ngOnInit(): void {
+    this.isLoading = true;
+    this.productService.getProductAll().subscribe((products) => {
+      this.products = products;
+      this.isLoading = false;
+    });
+  }
 
   share() {
     window.alert("The product has been shared!");
