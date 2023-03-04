@@ -14,6 +14,7 @@ import { ShippingComponent } from "./shipping/shipping.component";
 import { MainPageComponent } from "./main-page/main-page.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatInputModule } from "@angular/material/input";
+import { router } from "./router";
 
 @NgModule({
   imports: [
@@ -21,10 +22,10 @@ import { MatInputModule } from "@angular/material/input";
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: "", component: MainPageComponent },
-      { path: "first", component: ProductListComponent },
+      { path: router.index, component: MainPageComponent },
+      { path: router.example1, component: ProductListComponent },
       { path: "products/:productId", component: ProductDetailComponent },
-      { path: "cart", component: CartComponent },
+      { path: router.cart, component: CartComponent },
       { path: "shipping", component: ShippingComponent },
     ]),
     BrowserAnimationsModule,

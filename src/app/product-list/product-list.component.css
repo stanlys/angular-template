@@ -1,5 +1,6 @@
 a {
   font-weight: 600;
+  color: var(--element-background-color);
 }
 
 a:hover {
