@@ -1,0 +1,27 @@
+<div class="product">
+  <div>
+    <h4>
+      <a
+        [title]="product.title + ' details '"
+        [routerLink]="['/products', product.id]"
+      >
+        {{ product.title }}
+      </a>
+    </h4>
+  </div>
+  <div class="product__description">
+    <img [alt]="product.title" [src]="product.image" width="100px" />
+    <div>
+      <p *ngIf="product.description">{{ product.description }}</p>
+      <p>{{ product.rating.rate | currency : "★ " }}</p>
+      <p>{{ product.rating.count | currency : "꠹ " }}</p>
+    </div>
+  </div>
+  <div>
+    <button type="button">Add to Cart ${{ product.price }}</button>
+    <button type="button">Details</button>
+  </div>
+
+  <!-- <app-product-alert [product]="product" (notify)="onNotify()">
+  </app-product-alert> -->
+</div>

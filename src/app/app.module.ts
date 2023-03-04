@@ -15,6 +15,7 @@ import { MainPageComponent } from "./main-page/main-page.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatInputModule } from "@angular/material/input";
 import { router } from "./router";
+import { ProductCartComponent } from './product-cart/product-cart.component';
 
 @NgModule({
   imports: [
@@ -40,6 +41,7 @@ import { router } from "./router";
     CartComponent,
     ShippingComponent,
     MainPageComponent,
+    ProductCartComponent,
   ],
   bootstrap: [AppComponent],
 })
