@@ -1,8 +1,24 @@
 a {
-  color: black;
   font-weight: 600;
 }
 
+a:hover {
+  color: var(--link-hover-color);
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin: 3px;
+  padding: 5px;
+}
+
+.product__description {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
 /*
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that

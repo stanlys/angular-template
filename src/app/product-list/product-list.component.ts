@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { IProducts, MOCK_PRODUCTS } from "app/interfaces/product";
 
 import { products } from "../products";
 
@@ -9,6 +10,7 @@ import { products } from "../products";
 })
 export class ProductListComponent {
   products = products;
+  fakeProducts: IProducts[] = MOCK_PRODUCTS;
 
   share() {
     window.alert("The product has been shared!");

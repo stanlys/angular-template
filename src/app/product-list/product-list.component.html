@@ -1,18 +1,32 @@
 <h2>Products</h2>
-<div *ngFor="let product of products">
-  <div style="margin: 3px; padding: 5px">
-    <h4>
-      <a
-        [title]="product.name + ' details '"
-        [routerLink]="['/products', product.id]"
-      >
-        {{ product.name }} - ${{ product.price }}
-      </a>
-    </h4>
-    <p *ngIf="product.description">{{ product.description }}</p>
-    <button type="button" (click)="share()">Share</button>
-    <app-product-alert [product]="product" (notify)="onNotify()">
-    </app-product-alert>
+<div *ngFor="let product of fakeProducts">
+  <div class="product">
+    <div>
+      <h4>
+        <a
+          [title]="product.title + ' details '"
+          [routerLink]="['/products', product.id]"
+        >
+          {{ product.title }}
+        </a>
+      </h4>
+    </div>
+    <div class="product__description">
+      <img alt="{{ product.title }}" src="{{ product.image }}" width="100px" />
+      <div>
+        <p *ngIf="product.description">{{ product.description }}</p>
+        <p>{{ product.rating.rate | currency : "★" }}</p>
+      </div>
+    </div>
+    <div>
+      <button type="button" (click)="share()">
+        Add to Cart ${{ product.price }}
+      </button>
+      <button type="button" (click)="share()">Details</button>
+    </div>
+
+    <!-- <app-product-alert [product]="product" (notify)="onNotify()">
+    </app-product-alert> -->
   </div>
 </div>
 
