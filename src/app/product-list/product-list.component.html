@@ -1,6 +1,8 @@
 <h2>Products</h2>
-<div *ngFor="let product of fakeProducts" class="products">
-  <app-product-cart [product]="product"></app-product-cart>
+<div class="products">
+  <div *ngFor="let product of fakeProducts">
+    <app-product-cart [product]="product"></app-product-cart>
+  </div>
 </div>
 
 <!-- 

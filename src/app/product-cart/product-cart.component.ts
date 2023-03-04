@@ -8,4 +8,10 @@ import { IProducts } from "app/interfaces/product";
 })
 export class ProductCartComponent {
   @Input() product: IProducts;
+
+  showDetails = false;
+
+  toggleShowDetails() {
+    this.showDetails = !this.showDetails;
+  }
 }

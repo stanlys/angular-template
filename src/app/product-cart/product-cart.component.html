@@ -1,5 +1,5 @@
 <div class="product">
-  <div>
+  <div style="text-align: center">
     <h4>
       <a
         [title]="product.title + ' details '"
@@ -10,16 +10,27 @@
     </h4>
   </div>
   <div class="product__description">
-    <img [alt]="product.title" [src]="product.image" width="100px" />
+    <img [alt]="product.title" [src]="product.image" height="100px" />
     <div>
-      <p *ngIf="product.description">{{ product.description }}</p>
       <p>{{ product.rating.rate | currency : "★ " }}</p>
       <p>{{ product.rating.count | currency : "꠹ " }}</p>
     </div>
   </div>
   <div>
     <button type="button">Add to Cart ${{ product.price }}</button>
-    <button type="button">Details</button>
+    <button
+      type="button"
+      (click)="toggleShowDetails()"
+      [ngClass]="{
+        'btn_showDetails ': !showDetails,
+        'btn_hideDetails ': showDetails
+      }"
+    >
+      {{ showDetails ? " ˄ Hide" : " ˅ Show" }} Details
+    </button>
+  </div>
+  <div *ngIf="showDetails">
+    <p>{{ product.description }}</p>
   </div>
 
   <!-- <app-product-alert [product]="product" (notify)="onNotify()">

@@ -1,10 +1,11 @@
 html,
 body {
   height: 100%;
-  --main-background-color: #cccccc;
+  --main-background-color: #ffffff;
   --element-background-color: rgb(244, 89, 78);
   --link-color: #fff;
   --link-hover-color: #0066ff;
+  --shadow: rgba(244, 89, 78, 0.5);
 }
 
 body {
@@ -15,7 +16,7 @@ body {
 
 a {
   text-decoration: none;
-  color: var(--link-color);
+  color: var(--element-background-color);
 }
 
 footer {
@@ -31,7 +32,7 @@ button[type="button"] {
 }
 
 button:hover {
-  background-color: rgba(244, 89, 78, 0.5);
+  background-color: var(--shadow);
   border-radius: 1rem;
   margin: 0.9rem;
   margin-left: 0;
