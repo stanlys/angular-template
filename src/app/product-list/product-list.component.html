@@ -23,7 +23,7 @@
         let product of prodList | filterProducts : searchValue;
         let i = index
       "
-      [product]="product"
+      [product]="product | productTitleToLow"
       [index]="i + 1"
     >
     </app-product-cart>
