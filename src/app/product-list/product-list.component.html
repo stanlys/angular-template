@@ -1,7 +1,7 @@
 <h2>Products</h2>
 <div class="products">
   <h3 *ngIf="isLoading">Loading . . .</h3>
-  <div *ngFor="let product of products; let i = index">
+  <div *ngFor="let product of products | async; let i = index">
     <app-product-cart [product]="product" [index]="i + 1"></app-product-cart>
   </div>
 </div>

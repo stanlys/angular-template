@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { IProducts, MOCK_PRODUCTS } from "app/interfaces/product";
 import { ProductServices } from "app/services/product.services";
+import { Observable, tap } from "rxjs";
 
 import { products } from "../products";
 
@@ -10,17 +11,19 @@ import { products } from "../products";
   styleUrls: ["./product-list.component.css"],
 })
 export class ProductListComponent implements OnInit {
-  products: IProducts[] = [];
   isLoading = false;
-
+  products: Observable<IProducts[]>;
   constructor(private productService: ProductServices) {}
 
   ngOnInit(): void {
     this.isLoading = true;
-    this.productService.getProductAll().subscribe((products) => {
-      this.products = products;
-      this.isLoading = false;
-    });
+    this.products = this.productService
+      .getProductAll()
+      .pipe(tap(() => (this.isLoading = false)));
+    // this.productService.getProductAll().subscribe((products) => {
+    //   this.products = products;
+    //   this.isLoading = false;
+    // });
   }
 
   share() {

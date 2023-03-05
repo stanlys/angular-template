@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatInputModule } from "@angular/material/input";
 import { router } from "./router";
 import { ProductCartComponent } from './product-cart/product-cart.component';
+import { GlobalErrorComponent } from './global-error/global-error.component';
 
 @NgModule({
   imports: [
@@ -42,6 +43,7 @@ import { ProductCartComponent } from './product-cart/product-cart.component';
     ShippingComponent,
     MainPageComponent,
     ProductCartComponent,
+    GlobalErrorComponent,
   ],
   bootstrap: [AppComponent],
 })
