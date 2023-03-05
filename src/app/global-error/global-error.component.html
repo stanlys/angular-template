@@ -1,3 +1,6 @@
-<div class="error">
-  {{ error }}
+<div class="error" *ngIf="errorService.error | async as error">
+  <h4>
+    {{ error }}
+  </h4>
+  <span class="btn_close" (click)="errorService.clear()">&times;</span>
 </div>

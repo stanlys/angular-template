@@ -3,8 +3,6 @@ import { IProducts, MOCK_PRODUCTS } from "app/interfaces/product";
 import { ProductServices } from "app/services/product.services";
 import { Observable, tap } from "rxjs";
 
-import { products } from "../products";
-
 @Component({
   selector: "app-product-list",
   templateUrl: "./product-list.component.html",

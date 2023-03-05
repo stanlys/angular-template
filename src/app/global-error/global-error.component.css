@@ -1,7 +1,23 @@
 .error {
   width: 90vw;
-  height: 90vh;
+  height: 10vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: red;
+  font-size: larger;
+  font-weight: 600;
+  position: relative;
+}
+
+.btn_close {
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  color: blue;
+}
+
+.btn_close:hover {
+  cursor: pointer;
+  color: darkblue;
 }

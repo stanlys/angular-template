@@ -16,10 +16,10 @@ export class ProductServices {
 
   getProductAll(): Observable<IProducts[]> {
     return this.http
-      .get<Array<IProducts>>("https://fakestoreapi.com/products", {
+      .get<Array<IProducts>>("https://fakestoreapi.com/products1", {
         params: new HttpParams({ fromString: "limit=10" }),
       })
-      .pipe(delay(2000), catchError(this.errorHandler));
+      .pipe(delay(2000), catchError(this.errorHandler.bind(this)));
   }
 
   private errorHandler(error: HttpErrorResponse) {
