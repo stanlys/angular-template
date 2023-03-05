@@ -11,8 +11,8 @@ import { Observable, tap, map } from "rxjs";
 export class ProductListComponent implements OnInit {
   isLoading = false;
   searchValue = "";
-  value = "";
   products: Observable<IProducts[]>;
+
   constructor(private productService: ProductServices) {}
 
   ngOnInit(): void {

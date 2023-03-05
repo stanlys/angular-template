@@ -21,6 +21,7 @@ import { MatIconModule } from "@angular/material/icon";
 import { router } from "./router";
 import { ProductCartComponent } from "./product-cart/product-cart.component";
 import { GlobalErrorComponent } from "./global-error/global-error.component";
+import { FilterProductsPipe } from './pipes/filter-products.pipe';
 
 @NgModule({
   imports: [
@@ -51,6 +52,7 @@ import { GlobalErrorComponent } from "./global-error/global-error.component";
     MainPageComponent,
     ProductCartComponent,
     GlobalErrorComponent,
+    FilterProductsPipe,
   ],
   bootstrap: [AppComponent],
 })
