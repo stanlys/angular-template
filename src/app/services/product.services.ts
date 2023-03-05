@@ -16,7 +16,7 @@ export class ProductServices {
 
   getProductAll(): Observable<IProducts[]> {
     return this.http
-      .get<Array<IProducts>>("https://fakestoreapi.com/products1", {
+      .get<Array<IProducts>>("https://fakestoreapi.com/products", {
         params: new HttpParams({ fromString: "limit=10" }),
       })
       .pipe(delay(2000), catchError(this.errorHandler.bind(this)));

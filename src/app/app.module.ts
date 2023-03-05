@@ -3,6 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { FormsModule } from "@angular/forms";
 
 import { AppComponent } from "./app.component";
 import { TopBarComponent } from "./top-bar/top-bar.component";
@@ -14,9 +15,12 @@ import { ShippingComponent } from "./shipping/shipping.component";
 import { MainPageComponent } from "./main-page/main-page.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatInputModule } from "@angular/material/input";
+import { MatSelectModule } from "@angular/material/select";
+import { MatIconModule } from "@angular/material/icon";
+
 import { router } from "./router";
-import { ProductCartComponent } from './product-cart/product-cart.component';
-import { GlobalErrorComponent } from './global-error/global-error.component';
+import { ProductCartComponent } from "./product-cart/product-cart.component";
+import { GlobalErrorComponent } from "./global-error/global-error.component";
 
 @NgModule({
   imports: [
@@ -32,6 +36,9 @@ import { GlobalErrorComponent } from './global-error/global-error.component';
     ]),
     BrowserAnimationsModule,
     MatInputModule,
+    MatSelectModule,
+    MatIconModule,
+    FormsModule,
   ],
   declarations: [
     AppComponent,

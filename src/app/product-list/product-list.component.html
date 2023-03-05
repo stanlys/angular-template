@@ -1,5 +1,20 @@
 <h2>Products</h2>
 <app-global-error></app-global-error>
+<div>
+  <mat-form-field class="example-form-field">
+    <mat-label>Search...</mat-label>
+    <input matInput type="text" [(ngModel)]="value" />
+    <span
+      *ngIf="value"
+      matSuffix
+      mat-icon-button
+      aria-label="Clear"
+      (click)="value = ''"
+    >
+      <mat-icon>close</mat-icon>
+    </span>
+  </mat-form-field>
+</div>
 <div class="products">
   <h3 *ngIf="isLoading">Loading . . .</h3>
   <div *ngFor="let product of products | async; let i = index">

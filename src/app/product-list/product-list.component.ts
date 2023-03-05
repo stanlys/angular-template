@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { IProducts, MOCK_PRODUCTS } from "app/interfaces/product";
 import { ProductServices } from "app/services/product.services";
-import { Observable, tap } from "rxjs";
+import { Observable, tap, map } from "rxjs";
 
 @Component({
   selector: "app-product-list",
@@ -10,6 +10,8 @@ import { Observable, tap } from "rxjs";
 })
 export class ProductListComponent implements OnInit {
   isLoading = false;
+  searchValue = "";
+  value = "";
   products: Observable<IProducts[]>;
   constructor(private productService: ProductServices) {}
 
@@ -22,6 +24,10 @@ export class ProductListComponent implements OnInit {
     //   this.products = products;
     //   this.isLoading = false;
     // });
+  }
+  getProductsCategory() {
+    const selectElement = [];
+    return [{ value: "first1" }, { value: "second2" }];
   }
 
   share() {
