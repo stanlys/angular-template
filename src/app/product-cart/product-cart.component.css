@@ -13,13 +13,19 @@
 
 .product:hover {
   /* border-style: dashed; */
-  box-shadow: 13px 14px 10px -2px var(--shadow);
+  border-radius: 1rem;
+  box-shadow: 0 5px 30px 0 var(--shadow);
 }
 
 .product__description {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+}
+
+.btn_wrapper {
+  display: flex;
+  justify-content: center;
 }
 
 .btn_showDetails {

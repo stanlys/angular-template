@@ -1,7 +1,7 @@
 import { Component, HostListener, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
-import { CartService } from "../cart.service";
-import { Product, products } from "../products";
+import { CartService } from "../../cart.service";
+import { Product, products } from "../../products";
 
 @Component({
   selector: "app-product-detail",

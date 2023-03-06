@@ -8,10 +8,10 @@ import { FormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { TopBarComponent } from "./top-bar/top-bar.component";
 import { ProductListComponent } from "./product-list/product-list.component";
-import { ProductAlertComponent } from "./product-alert/product-alert.component";
-import { ProductDetailComponent } from "./product-detail/product-detail.component";
+import { ProductAlertComponent } from "./components/product-alert/product-alert.component";
+import { ProductDetailComponent } from "./components/product-detail/product-detail.component";
 import { CartComponent } from "./cart/cart.component";
-import { ShippingComponent } from "./shipping/shipping.component";
+import { ShippingComponent } from "./components/shipping/shipping.component";
 import { MainPageComponent } from "./main-page/main-page.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MatInputModule } from "@angular/material/input";
@@ -21,8 +21,9 @@ import { MatIconModule } from "@angular/material/icon";
 import { router } from "./router";
 import { ProductCartComponent } from "./product-cart/product-cart.component";
 import { GlobalErrorComponent } from "./global-error/global-error.component";
-import { FilterProductsPipe } from './pipes/filter-products.pipe';
-import { ProductTitleToLowPipe } from './pipes/product-title-to-low.pipe';
+import { FilterProductsPipe } from "./pipes/filter-products.pipe";
+import { ProductTitleToLowPipe } from "./pipes/product-title-to-low.pipe";
+import { ModalComponent } from "./components/modal/modal.component";
 
 @NgModule({
   imports: [
@@ -55,6 +56,7 @@ import { ProductTitleToLowPipe } from './pipes/product-title-to-low.pipe';
     GlobalErrorComponent,
     FilterProductsPipe,
     ProductTitleToLowPipe,
+    ModalComponent,
   ],
   bootstrap: [AppComponent],
 })
