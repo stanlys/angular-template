@@ -23,7 +23,7 @@ footer {
   background-color: var(--element-background-color);
 }
 
-button[type="button"] {
+button {
   background-color: var(--element-background-color);
   margin: 1rem;
   margin-left: 0;
