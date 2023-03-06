@@ -1,11 +1,8 @@
-<div class="modal_background">
+<div *ngIf="isShow" class="modal_background">
   <div class="modal_content">
-    <div class="modal_btn-close">
+    <div class="modal_btn-close" (click)="toggleShow()">
       <span>X</span>
     </div>
-    <div class="modal_content-btn">
-      <button>Confirm</button>
-      <button>Cancel</button>
-    </div>
+    <app-create-product></app-create-product>
   </div>
 </div>

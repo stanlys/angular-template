@@ -1,0 +1,20 @@
+.add_product {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 28rem;
+  height: 25px;
+  font-size: larger;
+  line-height: 28px;
+}
+
+.modal_content-btn {
+  display: flex;
+  width: 35vw;
+  justify-content: center;
+  align-items: center;
+}
