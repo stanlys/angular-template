@@ -1,8 +1,10 @@
 <div *ngIf="isShow" class="modal_background">
   <div class="modal_content">
+    <h3>{{ title | titlecase }}</h3>
     <div class="modal_btn-close" (click)="toggleShow()">
       <span>X</span>
     </div>
-    <app-create-product></app-create-product>
+
+    <ng-content></ng-content>
   </div>
 </div>
