@@ -1,7 +1,12 @@
 <div class="add_product">
   <p *ngIf="!isValid && this.form.touched" class="error">error in form</p>
   <form [formGroup]="form" (ngSubmit)="submit()">
-    <input type="text" placeholder="Product name" formControlName="title" />
+    <input
+      type="text"
+      placeholder="Product name"
+      formControlName="title"
+      appFocus
+    />
     <input type="text" placeholder="Enter price" formControlName="price" />
     <div class="modal_content-btn">
       <button type="submit">Confirm</button>
