@@ -1,4 +1,7 @@
-<h2>Products</h2>
+<div class="caption">
+  <h2>Products</h2>
+  <button (click)="modalService.open()">Add Product</button>
+</div>
 <app-global-error></app-global-error>
 <div>
   <mat-form-field class="example-form-field">
@@ -28,7 +31,7 @@
     >
     </app-product-cart>
   </div>
-  <app-modal title="Add new Product">
+  <app-modal *ngIf="modalService.isVisible | async" title="Add new Product">
     <app-create-product></app-create-product>
   </app-modal>
 </div>

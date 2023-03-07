@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { IProducts, MOCK_PRODUCTS } from "app/interfaces/product";
+import { ModalService } from "app/services/modal.service";
 import { ProductServices } from "app/services/product.services";
 import { Observable, tap, map } from "rxjs";
 
@@ -13,7 +14,10 @@ export class ProductListComponent implements OnInit {
   searchValue = "";
   products: Observable<IProducts[]>;
 
-  constructor(private productService: ProductServices) {}
+  constructor(
+    private productService: ProductServices,
+    public modalService: ModalService
+  ) {}
 
   ngOnInit(): void {
     this.isLoading = true;
