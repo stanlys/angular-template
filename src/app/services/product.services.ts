@@ -22,6 +22,13 @@ export class ProductServices {
       .pipe(delay(2000), catchError(this.errorHandler.bind(this)));
   }
 
+  createProduct(product: IProducts): Observable<IProducts> {
+    return this.http.post<IProducts>(
+      "https://fakestoreapi.com/products",
+      product
+    );
+  }
+
   private errorHandler(error: HttpErrorResponse) {
     this.errorService.handle(error.message);
     return throwError(() => error.message);
