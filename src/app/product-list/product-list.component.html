@@ -20,7 +20,7 @@
 </div>
 <div class="products">
   <h3 *ngIf="isLoading">Loading . . .</h3>
-  <div *ngIf="products | async as prodList" class="products">
+  <div *ngIf="productService.products as prodList" class="products">
     <app-product-cart
       *ngFor="
         let product of prodList | filterProducts : searchValue;

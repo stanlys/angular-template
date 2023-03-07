@@ -12,23 +12,24 @@ import { Observable, tap, map } from "rxjs";
 export class ProductListComponent implements OnInit {
   isLoading = false;
   searchValue = "";
-  products: Observable<IProducts[]>;
+  // products: Observable<IProducts[]>;
 
   constructor(
-    private productService: ProductServices,
+    public productService: ProductServices,
     public modalService: ModalService
   ) {}
 
   ngOnInit(): void {
     this.isLoading = true;
-    this.products = this.productService
-      .getProductAll()
-      .pipe(tap(() => (this.isLoading = false)));
-    // this.productService.getProductAll().subscribe((products) => {
-    //   this.products = products;
-    //   this.isLoading = false;
-    // });
+    // this.products = this.productService
+    //   .getProductAll()
+    //   .pipe(tap(() => (this.isLoading = false)));
+    this.productService.getProductAll().subscribe((products) => {
+      // this.products = products;
+      this.isLoading = false;
+    });
   }
+
   getProductsCategory() {
     const selectElement = [];
     return [{ value: "first1" }, { value: "second2" }];
