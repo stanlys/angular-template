@@ -1,20 +1,23 @@
-<ng-template #loading>
+<ng-template #buttons>
   <button class="tab-button">{{ loginText }}</button>
   <button class="tab-button">{{ singUpText }}</button>
 </ng-template>
 
-<div *ngIf="isAuth; else loading">
+<!-- <div *ngIf="isAuth; else loading">
   <p>Loading...</p>
 </div>
 
-<ng-container *ngTemplateOutlet="loading"></ng-container>
+<ng-container *ngTemplateOutlet="loading"></ng-container> -->
 
-<div class="auth">
-  <form>
-    <div>
-      <input name="login" placeholder="Login" />
+<ng-container>
+  <form class="auth">
+    <div class="formField">
+      <label for="login">Login: </label>
+      <input name="login" placeholder="Login" appFocus />
+      <img src="../../../assets/user.png" width="25px" />
     </div>
     <div class="formField">
+      <label for="password">Password: </label>
       <input name="password" placeholder="password" [type]="password.type" />
       <img
         (click)="togglePasswordElement()"
@@ -22,8 +25,8 @@
         width="25px"
       />
     </div>
-    <div>
-      <button>Log in</button>
+    <div class="formField">
+      <button appFullWidth>Log in</button>
     </div>
   </form>
-</div>
+</ng-container>

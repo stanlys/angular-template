@@ -27,6 +27,7 @@ import { ModalComponent } from "./components/modal/modal.component";
 import { CreateProductComponent } from "./components/create-product/create-product.component";
 import { FocusDirective } from "./directives/focus.directive";
 import { AuthComponent } from "./components/auth/auth.component";
+import { FullWidthDirective } from './directives/full-width.directive';
 
 @NgModule({
   imports: [
@@ -64,6 +65,7 @@ import { AuthComponent } from "./components/auth/auth.component";
     CreateProductComponent,
     FocusDirective,
     AuthComponent,
+    FullWidthDirective,
   ],
   bootstrap: [AppComponent],
 })
