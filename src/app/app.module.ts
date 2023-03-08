@@ -24,8 +24,9 @@ import { GlobalErrorComponent } from "./global-error/global-error.component";
 import { FilterProductsPipe } from "./pipes/filter-products.pipe";
 import { ProductTitleToLowPipe } from "./pipes/product-title-to-low.pipe";
 import { ModalComponent } from "./components/modal/modal.component";
-import { CreateProductComponent } from './components/create-product/create-product.component';
-import { FocusDirective } from './directives/focus.directive';
+import { CreateProductComponent } from "./components/create-product/create-product.component";
+import { FocusDirective } from "./directives/focus.directive";
+import { AuthComponent } from "./components/auth/auth.component";
 
 @NgModule({
   imports: [
@@ -38,6 +39,7 @@ import { FocusDirective } from './directives/focus.directive';
       { path: "products/:productId", component: ProductDetailComponent },
       { path: router.cart, component: CartComponent },
       { path: "shipping", component: ShippingComponent },
+      { path: "auth", component: AuthComponent },
     ]),
     BrowserAnimationsModule,
     MatInputModule,
@@ -61,6 +63,7 @@ import { FocusDirective } from './directives/focus.directive';
     ModalComponent,
     CreateProductComponent,
     FocusDirective,
+    AuthComponent,
   ],
   bootstrap: [AppComponent],
 })

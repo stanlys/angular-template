@@ -1,0 +1,10 @@
+<ng-template #loading>
+  <button class="tab-button">{{ loginText }}</button>
+  <button class="tab-button">{{ singUpText }}</button>
+</ng-template>
+
+<div *ngIf="isAuth; else loading">
+  <p>Loading...</p>
+</div>
+
+<ng-container *ngTemplateOutlet="loading"></ng-container>

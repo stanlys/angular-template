@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnDestroy, OnInit } from "@angular/core";
 import { IProducts, MOCK_PRODUCTS } from "app/interfaces/product";
 import { ModalService } from "app/services/modal.service";
 import { ProductServices } from "app/services/product.services";
@@ -9,7 +9,7 @@ import { Observable, tap, map } from "rxjs";
   templateUrl: "./product-list.component.html",
   styleUrls: ["./product-list.component.css"],
 })
-export class ProductListComponent implements OnInit {
+export class ProductListComponent implements OnInit, OnDestroy {
   isLoading = false;
   searchValue = "";
   // products: Observable<IProducts[]>;
@@ -18,6 +18,10 @@ export class ProductListComponent implements OnInit {
     public productService: ProductServices,
     public modalService: ModalService
   ) {}
+
+  ngOnDestroy(): void {
+    console.log("you close...");
+  }
 
   ngOnInit(): void {
     this.isLoading = true;
