@@ -1,0 +1,15 @@
+.auth {
+  width: 250px;
+  border: 1px var(--element-background-color) solid;
+  border-radius: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.formField {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}

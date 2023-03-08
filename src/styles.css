@@ -41,3 +41,7 @@ button:hover {
   border-style: solid;
   border-color: var(--element-background-color);
 }
+
+input {
+  height: 25px;
+}

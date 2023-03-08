@@ -8,3 +8,22 @@
 </div>
 
 <ng-container *ngTemplateOutlet="loading"></ng-container>
+
+<div class="auth">
+  <form>
+    <div>
+      <input name="login" placeholder="Login" />
+    </div>
+    <div class="formField">
+      <input name="password" placeholder="password" [type]="password.type" />
+      <img
+        (click)="togglePasswordElement()"
+        [src]="password.src"
+        width="25px"
+      />
+    </div>
+    <div>
+      <button>Log in</button>
+    </div>
+  </form>
+</div>
