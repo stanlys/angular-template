@@ -27,7 +27,8 @@ import { ModalComponent } from "./components/modal/modal.component";
 import { CreateProductComponent } from "./components/create-product/create-product.component";
 import { FocusDirective } from "./directives/focus.directive";
 import { AuthComponent } from "./components/auth/auth.component";
-import { FullWidthDirective } from './directives/full-width.directive';
+import { FullWidthDirective } from "./directives/full-width.directive";
+import { PageNotFoundComponent } from "./components/page-not-found/page-not-found.component";
 
 @NgModule({
   imports: [
@@ -40,7 +41,8 @@ import { FullWidthDirective } from './directives/full-width.directive';
       { path: "products/:productId", component: ProductDetailComponent },
       { path: router.cart, component: CartComponent },
       { path: "shipping", component: ShippingComponent },
-      { path: "auth", component: AuthComponent },
+      { path: "auth", title: "LogIn", component: AuthComponent },
+      { path: "**", title: "404", component: PageNotFoundComponent },
     ]),
     BrowserAnimationsModule,
     MatInputModule,
@@ -66,6 +68,7 @@ import { FullWidthDirective } from './directives/full-width.directive';
     FocusDirective,
     AuthComponent,
     FullWidthDirective,
+    PageNotFoundComponent,
   ],
   bootstrap: [AppComponent],
 })

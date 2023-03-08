@@ -1,3 +1,10 @@
+.authPage {
+  min-height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .auth {
   width: 250px;
   border: 1px var(--element-background-color) solid;
