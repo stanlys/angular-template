@@ -15,9 +15,24 @@
   padding: 2rem;
 }
 
+.icon {
+  padding-left: 0.2rem;
+  min-width: 40px;
+  color: var(--element-background-color);
+}
+
+.auth span {
+  position: absolute;
+}
+
 .formField {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
   gap: 2px;
+}
+
+input {
+  padding-left: 2rem;
+  width: 100%;
 }

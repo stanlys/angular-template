@@ -12,18 +12,28 @@
 <div class="authPage">
   <form class="auth">
     <div class="formField">
-      <label for="login">Login: </label>
+      <span
+        class="material-symbols-outlined icon"
+        (click)="togglePasswordElement()"
+      >
+        person
+      </span>
       <input name="login" placeholder="Login" appFocus />
-      <img src="../../../assets/user.png" width="25px" />
     </div>
     <div class="formField">
-      <label for="password">Password: </label>
+      <!-- <label for="password">Password: </label> -->
+      <span
+        class="material-symbols-outlined icon"
+        (click)="togglePasswordElement()"
+      >
+        {{ password.icon_name }}
+      </span>
       <input name="password" placeholder="password" [type]="password.type" />
-      <img
+      <!-- <img
         (click)="togglePasswordElement()"
         [src]="password.src"
         width="25px"
-      />
+      /> -->
     </div>
     <div class="formField">
       <button appFullWidth>Log in</button>
