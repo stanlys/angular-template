@@ -21,6 +21,8 @@ export class AuthComponent {
   password = passwordElements[0];
   isAuth = true;
 
+  // constructor(public translate: TranslateService) {}
+
   togglePasswordElement() {
     this.password =
       this.password.type === "password"

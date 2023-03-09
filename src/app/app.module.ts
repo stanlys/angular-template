@@ -2,8 +2,9 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from "@angular/router";
 import { ReactiveFormsModule } from "@angular/forms";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule, HttpClient } from "@angular/common/http";
 import { FormsModule } from "@angular/forms";
+import { TranslateModule, TranslateLoader } from "@ngx-translate/core";
 
 import { AppComponent } from "./app.component";
 import { TopBarComponent } from "./top-bar/top-bar.component";
@@ -29,6 +30,12 @@ import { FocusDirective } from "./directives/focus.directive";
 import { AuthComponent } from "./components/auth/auth.component";
 import { FullWidthDirective } from "./directives/full-width.directive";
 import { PageNotFoundComponent } from "./components/page-not-found/page-not-found.component";
+import { TranslateHttpLoader } from "@ngx-translate/http-loader";
+
+// AoT requires an exported function for factories
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   imports: [
@@ -49,6 +56,14 @@ import { PageNotFoundComponent } from "./components/page-not-found/page-not-foun
     MatSelectModule,
     MatIconModule,
     FormsModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient],
+      },
+      defaultLanguage: "en",
+    }),
   ],
   declarations: [
     AppComponent,

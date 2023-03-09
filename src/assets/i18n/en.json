@@ -1,0 +1,9 @@
+{
+  "HOME": {
+    "RU": "Russian",
+    "EN": "English",
+    "HELLO": " {{name}} Hello my dear friend",
+    "CART": "Cart",
+    "LOGIN": "Log In"
+  }
+}

@@ -3,14 +3,21 @@
   <a [routerLink]="['/']">
     <h1>My Store</h1>
   </a>
-
   <a class="button fancy-button" routerLink="/cart">
     <i class="material-icons"> shopping_cart</i>
     <span *ngIf="products.length > 0" class="tooltip">
       + {{ products.length }}Checkout
     </span>
-    <span *ngIf="products.length == 0"> Cart </span>
+    <span *ngIf="products.length == 0"> {{ "HOME.CART" | translate }} </span>
   </a>
+  <div>
+    <select>
+      <option><img src="../../assets/en.png" /></option>
+      <option><img src="../../assets/ru.png" /></option>
+    </select>
+    <button (click)="translate.use('ru')">{{ "HOME.RU" | translate }}</button>
+    <button (click)="translate.use('en')">{{ "HOME.EN" | translate }}</button>
+  </div>
 </nav>
 <!-- 
 Copyright Google LLC. All Rights Reserved.

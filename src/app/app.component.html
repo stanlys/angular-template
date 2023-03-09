@@ -1,5 +1,7 @@
 <app-top-bar></app-top-bar>
 <main class="grid min-h-full place-items-center">
+  {{ "HOME.HELLO" | translate : { name: userName } }}
+
   <div class="container">
     <router-outlet></router-outlet>
   </div>

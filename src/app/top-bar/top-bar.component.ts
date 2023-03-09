@@ -1,5 +1,6 @@
 import { Component, Injectable } from "@angular/core";
 import { CartService } from "../cart.service";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: "app-top-bar",
@@ -8,7 +9,7 @@ import { CartService } from "../cart.service";
 })
 export class TopBarComponent {
   products = this.cart.getItems();
-  constructor(private cart: CartService) {}
+  constructor(private cart: CartService, public translate: TranslateService) {}
 }
 
 /*
