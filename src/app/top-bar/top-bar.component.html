@@ -11,14 +11,21 @@
     <span *ngIf="products.length == 0"> {{ "HOME.CART" | translate }} </span>
   </a>
   <div>
-    <select>
-      <option><img src="../../assets/en.png" /></option>
-      <option><img src="../../assets/ru.png" /></option>
-    </select>
-    <button (click)="translate.use('ru')">{{ "HOME.RU" | translate }}</button>
+    <img
+      style="padding-right: 5px"
+      src="../../assets/ru.png"
+      width="25px"
+      (click)="translate.use('ru')"
+    />
+    <img src="../../assets/en.png" width="25px" (click)="translate.use('en')" />
+    <!-- <button (click)="translate.use('ru')">{{ "HOME.RU" | translate }}</button>
     <button (click)="translate.use('en')">{{ "HOME.EN" | translate }}</button>
+    <button (click)="translate.use(translate.getDefaultLang())">
+      Dafault lang
+    </button> -->
   </div>
 </nav>
+
 <!-- 
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
