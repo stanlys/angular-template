@@ -12,12 +12,7 @@
 <div class="authPage">
   <form class="auth">
     <div class="formField">
-      <span
-        class="material-symbols-outlined icon"
-        (click)="togglePasswordElement()"
-      >
-        person
-      </span>
+      <span class="material-symbols-outlined icon"> person </span>
       <input name="login" placeholder="Login" appFocus />
     </div>
     <div class="formField">
@@ -35,10 +30,7 @@
         width="25px"
       /> -->
     </div>
-    <div class="figma">
-      <input />
-      <div></div>
-    </div>
+    <app-input-woth-footer footerColor="red"></app-input-woth-footer>
     <div class="formField">
       <button appFullWidth>{{ "HOME.LOGIN" | translate }}</button>
     </div>

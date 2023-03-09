@@ -10,9 +10,10 @@
   border: 1px var(--element-background-color) solid;
   border-radius: 1rem;
   display: flex;
-  gap: 1rem;
+  gap: 1.1rem;
   flex-direction: column;
   padding: 2rem;
+  background-color: #c4c4c4;
 }
 
 .icon {
@@ -37,20 +38,8 @@ input {
   width: 100%;
 }
 
-.figma {
-  height: 33.6px;
-  width: 100%;
+button {
+  margin-top: 1rem;
+  text-align: center;
 }
 
-.figma > input {
-  padding: 1px;
-  width: 99%;
-  background-color: #e0e0e0;
-  border: 0px;
-}
-
-.figma > div {
-  background-color: #c4c4c4;
-  height: 4.8px;
-  border-radius: 0 0 5px 5px;
-}

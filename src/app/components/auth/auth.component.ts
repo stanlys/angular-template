@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 interface IPassword {
   type: string;
@@ -20,6 +20,9 @@ export class AuthComponent {
   singUpText = "Окно регистрации";
   password = passwordElements[0];
   isAuth = true;
+
+  @Input()
+  color: string = "#c4c4c4";
 
   // constructor(public translate: TranslateService) {}
 
