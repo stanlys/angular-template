@@ -1,7 +1,6 @@
 <app-top-bar [userName]="userName"></app-top-bar>
 <main class="grid min-h-full place-items-center">
   {{ "HOME.HELLO" | translate : { name: userName } }}
-  <input [value]="userName" (change)="test($event)" />
   <div class="container">
     <router-outlet></router-outlet>
   </div>

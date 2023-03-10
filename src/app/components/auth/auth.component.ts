@@ -1,3 +1,5 @@
+import { EventEmitter } from "@angular/core";
+import { Output } from "@angular/core";
 import { Component, Input } from "@angular/core";
 
 interface IPassword {
@@ -20,12 +22,15 @@ export class AuthComponent {
   singUpText = "Окно регистрации";
   password = passwordElements[0];
   isAuth = true;
+  userName = "User";
 
   @Input()
   color: string = "#c4c4c4";
 
-  // constructor(public translate: TranslateService) {}
+  @Output()
+  test = new EventEmitter();
 
+  // constructor(public translate: TranslateService) {}
   togglePasswordElement() {
     this.password =
       this.password.type === "password"
@@ -35,5 +40,10 @@ export class AuthComponent {
 
   testClick() {
     console.log("Click on icon");
+  }
+
+  onTest(event: Event) {
+    const value = (event.target as HTMLInputElement).value;
+    this.test.emit(value);
   }
 }
