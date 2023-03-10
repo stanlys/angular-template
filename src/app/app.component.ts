@@ -11,6 +11,12 @@ export class AppComponent {
   userName = "Stan";
 
   constructor(public translate: TranslateService) {}
+
+  test(e: Event) {
+    const a = e.target as HTMLInputElement;
+    this.userName = a.value;
+    console.log(a.value);
+  }
 }
 
 /*

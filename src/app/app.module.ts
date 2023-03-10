@@ -31,7 +31,7 @@ import { AuthComponent } from "./components/auth/auth.component";
 import { FullWidthDirective } from "./directives/full-width.directive";
 import { PageNotFoundComponent } from "./components/page-not-found/page-not-found.component";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
-import { InputWothFooterComponent } from './components/input/input-woth-footer/input-woth-footer.component';
+import { InputWothFooterComponent } from "./components/input/input-woth-footer/input-woth-footer.component";
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -44,10 +44,10 @@ export function HttpLoaderFactory(http: HttpClient) {
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule.forRoot([
-      { path: router.index, component: MainPageComponent },
+      { path: router.index, title: "Main", component: MainPageComponent },
       { path: router.example1, component: ProductListComponent },
       { path: "products/:productId", component: ProductDetailComponent },
-      { path: router.cart, component: CartComponent },
+      { path: router.cart, title: "Корзина", component: CartComponent },
       { path: "shipping", component: ShippingComponent },
       { path: "auth", title: "LogIn", component: AuthComponent },
       { path: "**", title: "404", component: PageNotFoundComponent },
