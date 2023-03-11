@@ -18,7 +18,7 @@
     </div>
   </div>
   <div class="btn_wrapper">
-    <button type="button">Add to Cart ${{ product.price }}</button>
+    <button type="button" (click)="addToCart()">Add to Cart ${{ product.price }}</button>
     <button
       type="button"
       (click)="toggleShowDetails()"

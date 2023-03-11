@@ -32,7 +32,7 @@
 
   <label for="name">Products </label>
   <div *ngFor="let item of products" class="cart-item">
-    <input type="checkbox" formControlName="products" />{{ item.name }}
+    <input type="checkbox" formControlName="products" />{{ item.title }}
   </div>
   <button class="button" type="submit">Send</button>
 </form>
