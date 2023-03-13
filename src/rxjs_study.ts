@@ -33,7 +33,7 @@ const search$ = fromEvent(
 
 console.log("start subscribe");
 let sum = 0;
-search$
+const obser = search$
   .pipe(
     map((event) => (event.target as HTMLInputElement).value),
     debounceTime(1000),
@@ -46,3 +46,8 @@ search$
     complete: () => console.warn("finish"),
   });
 console.log("end subsribe  - sum:", sum);
+
+setTimeout(() => {
+  obser.unsubscribe();
+  console.log("finish");
+}, 10000);
