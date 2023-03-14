@@ -33,6 +33,7 @@ import { PageNotFoundComponent } from "./components/page-not-found/page-not-foun
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { InputWothFooterComponent } from "./components/input/input-woth-footer/input-woth-footer.component";
 import { RatingInputComponent } from './components/rating-input/rating-input.component';
+import { MyInputComponent } from './components/my-input/my-input.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -88,6 +89,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     PageNotFoundComponent,
     InputWothFooterComponent,
     RatingInputComponent,
+    MyInputComponent,
   ],
   bootstrap: [AppComponent],
 })

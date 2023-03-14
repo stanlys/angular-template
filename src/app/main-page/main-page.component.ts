@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { FormControl, FormGroup } from "@angular/forms";
 
 @Component({
   selector: "app-main-page",
@@ -6,7 +7,12 @@ import { Component } from "@angular/core";
   styleUrls: ["./main-page.component.css"],
 })
 export class MainPageComponent {
-  onTest(s: string) {
-    console.log(s);
+  myForm: FormGroup = new FormGroup({
+    userName: new FormControl(),
+    userEmail: new FormControl(),
+  });
+
+  onTest() {
+    console.log(this.myForm);
   }
 }
