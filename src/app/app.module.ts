@@ -32,6 +32,7 @@ import { FullWidthDirective } from "./directives/full-width.directive";
 import { PageNotFoundComponent } from "./components/page-not-found/page-not-found.component";
 import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { InputWothFooterComponent } from "./components/input/input-woth-footer/input-woth-footer.component";
+import { MyInputComponent } from './components/my-input/my-input.component';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -86,6 +87,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     FullWidthDirective,
     PageNotFoundComponent,
     InputWothFooterComponent,
+    MyInputComponent,
   ],
   bootstrap: [AppComponent],
 })

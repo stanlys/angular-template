@@ -1,9 +1,23 @@
 <div class="main-page">
   <main>
+    <form [formGroup]="myForm" (ngSubmit)="submit()">
+      <app-my-input
+        [value]="'4'"
+        title="1"
+        formControlName="first"
+      ></app-my-input>
+      <app-my-input
+        [value]="'4'"
+        title="1"
+        formControlName="second"
+      ></app-my-input>
+      <button type="submit">Send</button>
+    </form>
+
     <div>
       <a routerLink="/first"><div>Products []</div></a>
       <a routerLink="/auth"><div>Auth</div></a>
     </div>
   </main>
-  <app-auth (test)="onTest($event)"></app-auth>
+  <!-- <app-auth (test)="onTest($event)"></app-auth> -->
 </div>
