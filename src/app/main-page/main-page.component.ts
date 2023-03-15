@@ -7,14 +7,14 @@ import { FormControl, FormGroup } from "@angular/forms";
   styleUrls: ["./main-page.component.css"],
 })
 export class MainPageComponent {
-  onTest(s: string) {
-    console.log(s);
-  }
-
   myForm: FormGroup = new FormGroup({
-    first: new FormControl(""),
-    second: new FormControl(""),
+    userName: new FormControl(),
+    userEmail: new FormControl(),
   });
+
+  onTest() {
+    console.log(this.myForm);
+  }
 
   submit() {
     console.log(this.myForm);

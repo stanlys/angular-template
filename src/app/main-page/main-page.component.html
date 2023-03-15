@@ -1,19 +1,11 @@
 <div class="main-page">
   <main>
-    <form [formGroup]="myForm" (ngSubmit)="submit()">
-      <app-my-input
-        [value]="'4'"
-        title="1"
-        formControlName="first"
-      ></app-my-input>
-      <app-my-input
-        [value]="'4'"
-        title="1"
-        formControlName="second"
-      ></app-my-input>
+    <form [formGroup]="myForm" (submit)="onTest()">
+      <app-my-input title="TEST" formControlName="userName"></app-my-input>
+      <app-my-input title="TEST" formControlName="userEmail"></app-my-input>
       <button type="submit">Send</button>
     </form>
-
+    <app-rating-input [disable]="false"></app-rating-input>
     <div>
       <a routerLink="/first"><div>Products []</div></a>
       <a routerLink="/auth"><div>Auth</div></a>

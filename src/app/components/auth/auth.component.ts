@@ -13,7 +13,7 @@ const passwordElements: IPassword[] = [
 ];
 
 @Component({
-  selector: "appAuth",
+  selector: "app-auth",
   templateUrl: "./auth.component.html",
   styleUrls: ["./auth.component.css"],
 })

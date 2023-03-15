@@ -4,7 +4,6 @@ import {
   FormControl,
   NG_VALUE_ACCESSOR,
 } from "@angular/forms";
-import { provideRouter } from "@angular/router";
 
 @Component({
   selector: "app-my-input",
@@ -13,56 +12,53 @@ import { provideRouter } from "@angular/router";
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => MyInputComponent),
+      useExisting: MyInputComponent,
       multi: true,
     },
   ],
 })
 export class MyInputComponent implements ControlValueAccessor {
-  disabled = false;
-
-  private _value = "";
-
-  startControl = new FormControl();
-
-  get value() {
-    return this._value;
-  }
-
   @Input()
   title!: string;
 
-  @Input()
-  set value(val) {
-    this._value = val;
-    this.onChange(val);
-  }
+  field = "";
 
-  private onChange = (value: any) => {};
+  @Input()
+  disable = false;
+
+  formValue = new FormControl<string>("");
+
   private onTouched = () => {};
 
-  writeValue(obj: any): void {
-    this._value = obj;
+  private onChange: (value: string) => void = () => {};
+
+  set value(val: string) {
+    this.field = val;
+    this.onChange(val);
+    this.onTouched();
   }
-  
-  registerOnChange(fn: any): void {
-    this.onChange = fn;
+  @Input()
+  get value() {
+    return this.field;
   }
 
-  registerOnTouched(fn: any): void {
+  writeValue(newValue: string): void {
+    this.value = newValue;
+    // this.onChange(newValue);
+    console.log("new value", newValue);
+  }
+  registerOnChange(onChange: (value: string) => void): void {
+    console.log("reg1");
+    this.onChange = onChange;
+  }
+  registerOnTouched(fn: () => void): void {
     this.onTouched = fn;
   }
-
   setDisabledState?(isDisabled: boolean): void {
-    this.disabled = isDisabled;
+    this.disable = isDisabled;
   }
 
-  up() {
-    this._value = this._value + "1";
+  printToConsole() {
+    console.log("Print to console:", this.field);
   }
-
-  down() {
-    this._value = " ";
-  }
-
 }

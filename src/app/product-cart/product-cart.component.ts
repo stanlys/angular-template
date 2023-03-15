@@ -1,4 +1,5 @@
 import { Component, Input } from "@angular/core";
+import { CartService } from "app/cart.service";
 import { IProducts } from "app/interfaces/product";
 
 @Component({
@@ -12,7 +13,13 @@ export class ProductCartComponent {
 
   showDetails = false;
 
+  constructor(public cartService: CartService) {}
+
   toggleShowDetails() {
     this.showDetails = !this.showDetails;
+  }
+
+  addToCart() {
+    this.cartService.addToCart(this.product);
   }
 }

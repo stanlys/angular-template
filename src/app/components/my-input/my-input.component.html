@@ -1,4 +1,5 @@
-<label>{{ title }}</label>
-<button (click)="down()" [disabled]="disabled">--</button>
-<input [ngModel]="value" [formControl]="startControl" />
-<button (click)="up()" [disabled]="disabled">++</button>
+<div>
+  <label> {{ title }}</label>
+  <input [(ngModel)]="value" />
+  <button (click)="printToConsole()">-> to Console</button>
+</div>
