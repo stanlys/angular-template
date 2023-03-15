@@ -1,5 +1,5 @@
-<div>
-  <label> {{ title }}</label>
-  <input [(ngModel)]="value" [disabled]="disable" />
+<div appBolder>
+  <label id="caption" for="input"> {{ title }}</label>
+  <input id="input" [(ngModel)]="value" [disabled]="disable" />
   <button (click)="printToConsole()">{{ buttonCaption }}</button>
 </div>

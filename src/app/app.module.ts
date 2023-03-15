@@ -34,6 +34,7 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { InputWothFooterComponent } from "./components/input/input-woth-footer/input-woth-footer.component";
 import { RatingInputComponent } from "./components/rating-input/rating-input.component";
 import { MyInputComponent } from "./components/my-input/my-input.component";
+import { BolderDirective } from './components/my-input/directives/bolder.directive';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -90,6 +91,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     InputWothFooterComponent,
     RatingInputComponent,
     MyInputComponent,
+    BolderDirective,
   ],
   bootstrap: [AppComponent],
 })
