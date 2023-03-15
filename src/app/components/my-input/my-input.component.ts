@@ -21,6 +21,9 @@ export class MyInputComponent implements ControlValueAccessor {
   @Input()
   title!: string;
 
+  @Input()
+  buttonCaption!: string;
+
   field = "";
 
   @Input()
@@ -44,11 +47,8 @@ export class MyInputComponent implements ControlValueAccessor {
 
   writeValue(newValue: string): void {
     this.value = newValue;
-    // this.onChange(newValue);
-    console.log("new value", newValue);
   }
   registerOnChange(onChange: (value: string) => void): void {
-    console.log("reg1");
     this.onChange = onChange;
   }
   registerOnTouched(fn: () => void): void {

@@ -8,7 +8,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => RatingInputComponent),
+      useExisting: RatingInputComponent,
       multi: true,
     },
   ],
@@ -16,17 +16,16 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 export class RatingInputComponent implements ControlValueAccessor {
   @Input() disable = false;
 
-  @HostBinding("style.opacity")
-  get opacity() {
-    return this.disable ? 0.25 : 1;
-  }
+  value = 0;
+  //private onChange!: Function;
+  private onTouched!: Function;
+  private onChange = (rating: number) => {};
 
-  onChange = (rating: number) => {};
-
-  onTouched = () => {};
+  // onTouched = () => {};
 
   writeValue(rating: number): void {
     this.stars = this.stars.map((_, i) => rating > i);
+    this.value = rating;
     this.onChange(this.value);
   }
   registerOnChange(fn: (rating: number) => void): void {
@@ -40,13 +39,24 @@ export class RatingInputComponent implements ControlValueAccessor {
   }
   stars: Array<boolean> = Array(5).fill(false);
 
-  get value(): number {
-    return this.stars.reduce((total, starred) => {
-      return total + (starred ? 1 : 0);
-    }, 0);
-  }
+  // set value(count: number) {
+  //   // this.stars = Array(5).fill(false);
+  //   this.stars = this.stars.map((_, i) => i < count);
+  // }
+  // @Input()
+  // get value(): number {
+  //   const res = this.stars.reduce((total, starred) => {
+  //     return total + (starred ? 1 : 0);
+  //   }, 0);
+  //   console.log(res);
+  //   return res;
+  // }
 
   rate(rating: number) {
+    this.onTouched();
+    this.onChange(rating);
     this.stars = this.stars.map((_, i) => rating > i);
+    this.value = rating;
+    console.log(rating);
   }
 }
